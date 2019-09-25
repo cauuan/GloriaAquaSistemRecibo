@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SistemaAquaRecibo
 {
-    public partial class frmPrincipal : Form
+    public partial class addResp : Form
     {
-        public frmPrincipal()
+        public addResp()
         {
             InitializeComponent();
-        }
-        private void AlunoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAluno frm = new frmAluno();
-            frm.ShowDialog();
         }
     }
 }
