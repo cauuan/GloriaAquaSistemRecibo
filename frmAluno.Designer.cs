@@ -29,7 +29,15 @@
         private void InitializeComponent()
         {
             this.gbAluno = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.dgModalidades = new System.Windows.Forms.DataGridView();
+            this.btnExMod = new System.Windows.Forms.Button();
+            this.btnAddMod = new System.Windows.Forms.Button();
+            this.lblPagamentos = new System.Windows.Forms.Label();
+            this.dgPagamento = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAAddResponsavel = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnSalvarAluno = new System.Windows.Forms.Button();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.label71 = new System.Windows.Forms.Label();
             this.txtRG = new System.Windows.Forms.TextBox();
@@ -73,19 +81,23 @@
             this.lblEndereco = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnAAddResponsavel = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.gbAluno.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgModalidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPagamento)).BeginInit();
             this.gbTrancamento.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbAluno
             // 
+            this.gbAluno.Controls.Add(this.dgModalidades);
+            this.gbAluno.Controls.Add(this.btnExMod);
+            this.gbAluno.Controls.Add(this.btnAddMod);
+            this.gbAluno.Controls.Add(this.lblPagamentos);
+            this.gbAluno.Controls.Add(this.dgPagamento);
             this.gbAluno.Controls.Add(this.label3);
             this.gbAluno.Controls.Add(this.btnAAddResponsavel);
             this.gbAluno.Controls.Add(this.comboBox1);
-            this.gbAluno.Controls.Add(this.button8);
+            this.gbAluno.Controls.Add(this.btnSalvarAluno);
             this.gbAluno.Controls.Add(this.maskedTextBox5);
             this.gbAluno.Controls.Add(this.label71);
             this.gbAluno.Controls.Add(this.txtRG);
@@ -128,18 +140,95 @@
             this.gbAluno.TabStop = false;
             this.gbAluno.Text = "Aluno";
             // 
-            // button8
+            // dgModalidades
             // 
-            this.button8.Location = new System.Drawing.Point(734, 469);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(194, 23);
-            this.button8.TabIndex = 87;
-            this.button8.Text = "Salvar Aluno";
-            this.button8.UseVisualStyleBackColor = true;
+            this.dgModalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgModalidades.Location = new System.Drawing.Point(6, 292);
+            this.dgModalidades.Name = "dgModalidades";
+            this.dgModalidades.RowHeadersWidth = 49;
+            this.dgModalidades.RowTemplate.Height = 24;
+            this.dgModalidades.Size = new System.Drawing.Size(479, 173);
+            this.dgModalidades.TabIndex = 94;
+            // 
+            // btnExMod
+            // 
+            this.btnExMod.Location = new System.Drawing.Point(326, 469);
+            this.btnExMod.Name = "btnExMod";
+            this.btnExMod.Size = new System.Drawing.Size(160, 23);
+            this.btnExMod.TabIndex = 93;
+            this.btnExMod.Text = "Excluir Modalidade";
+            this.btnExMod.UseVisualStyleBackColor = true;
+            this.btnExMod.Click += new System.EventHandler(this.BtnExMod_Click);
+            // 
+            // btnAddMod
+            // 
+            this.btnAddMod.Location = new System.Drawing.Point(351, 259);
+            this.btnAddMod.Name = "btnAddMod";
+            this.btnAddMod.Size = new System.Drawing.Size(135, 23);
+            this.btnAddMod.TabIndex = 93;
+            this.btnAddMod.Text = "Add Modalidade";
+            this.btnAddMod.UseVisualStyleBackColor = true;
+            this.btnAddMod.Click += new System.EventHandler(this.BtnAddMod_Click);
+            // 
+            // lblPagamentos
+            // 
+            this.lblPagamentos.AutoSize = true;
+            this.lblPagamentos.Location = new System.Drawing.Point(508, 162);
+            this.lblPagamentos.Name = "lblPagamentos";
+            this.lblPagamentos.Size = new System.Drawing.Size(87, 17);
+            this.lblPagamentos.TabIndex = 92;
+            this.lblPagamentos.Text = "Pagamentos";
+            // 
+            // dgPagamento
+            // 
+            this.dgPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPagamento.Location = new System.Drawing.Point(511, 185);
+            this.dgPagamento.Name = "dgPagamento";
+            this.dgPagamento.RowHeadersWidth = 49;
+            this.dgPagamento.RowTemplate.Height = 24;
+            this.dgPagamento.Size = new System.Drawing.Size(417, 280);
+            this.dgPagamento.TabIndex = 91;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(103, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 17);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "---";
+            // 
+            // btnAAddResponsavel
+            // 
+            this.btnAAddResponsavel.Location = new System.Drawing.Point(351, 221);
+            this.btnAAddResponsavel.Name = "btnAAddResponsavel";
+            this.btnAAddResponsavel.Size = new System.Drawing.Size(135, 23);
+            this.btnAAddResponsavel.TabIndex = 89;
+            this.btnAAddResponsavel.Text = "Add Responsavel";
+            this.btnAAddResponsavel.UseVisualStyleBackColor = true;
+            this.btnAAddResponsavel.Click += new System.EventHandler(this.BtnAAddResponsavel_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(99, 259);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(243, 24);
+            this.comboBox1.TabIndex = 88;
+            // 
+            // btnSalvarAluno
+            // 
+            this.btnSalvarAluno.Location = new System.Drawing.Point(734, 469);
+            this.btnSalvarAluno.Name = "btnSalvarAluno";
+            this.btnSalvarAluno.Size = new System.Drawing.Size(194, 23);
+            this.btnSalvarAluno.TabIndex = 87;
+            this.btnSalvarAluno.Text = "Salvar Aluno";
+            this.btnSalvarAluno.UseVisualStyleBackColor = true;
+            this.btnSalvarAluno.Click += new System.EventHandler(this.BtnSalvarAluno_Click);
             // 
             // maskedTextBox5
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(140, 354);
+            this.maskedTextBox5.Location = new System.Drawing.Point(632, 26);
             this.maskedTextBox5.Mask = "00/00/0000";
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(81, 22);
@@ -149,7 +238,7 @@
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(11, 357);
+            this.label71.Location = new System.Drawing.Point(503, 29);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(121, 17);
             this.label71.TabIndex = 85;
@@ -181,16 +270,16 @@
             this.gbTrancamento.Controls.Add(this.label15);
             this.gbTrancamento.Controls.Add(this.mkbT);
             this.gbTrancamento.Controls.Add(this.lblTrancamento);
-            this.gbTrancamento.Location = new System.Drawing.Point(10, 382);
+            this.gbTrancamento.Location = new System.Drawing.Point(502, 56);
             this.gbTrancamento.Name = "gbTrancamento";
-            this.gbTrancamento.Size = new System.Drawing.Size(475, 100);
+            this.gbTrancamento.Size = new System.Drawing.Size(436, 100);
             this.gbTrancamento.TabIndex = 82;
             this.gbTrancamento.TabStop = false;
             this.gbTrancamento.Text = "Trancamento";
             // 
             // mkbFinalCreditoT
             // 
-            this.mkbFinalCreditoT.Location = new System.Drawing.Point(340, 62);
+            this.mkbFinalCreditoT.Location = new System.Drawing.Point(330, 62);
             this.mkbFinalCreditoT.Mask = "00/00/0000";
             this.mkbFinalCreditoT.Name = "mkbFinalCreditoT";
             this.mkbFinalCreditoT.Size = new System.Drawing.Size(85, 22);
@@ -200,7 +289,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(206, 65);
+            this.label17.Location = new System.Drawing.Point(196, 65);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(105, 17);
             this.label17.TabIndex = 80;
@@ -208,7 +297,7 @@
             // 
             // mkbRetornoT
             // 
-            this.mkbRetornoT.Location = new System.Drawing.Point(119, 62);
+            this.mkbRetornoT.Location = new System.Drawing.Point(109, 62);
             this.mkbRetornoT.Mask = "00/00/0000";
             this.mkbRetornoT.Name = "mkbRetornoT";
             this.mkbRetornoT.Size = new System.Drawing.Size(81, 22);
@@ -218,7 +307,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(24, 65);
+            this.label16.Location = new System.Drawing.Point(14, 65);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(59, 17);
             this.label16.TabIndex = 78;
@@ -226,7 +315,7 @@
             // 
             // txtAulasDeCredito
             // 
-            this.txtAulasDeCredito.Location = new System.Drawing.Point(340, 27);
+            this.txtAulasDeCredito.Location = new System.Drawing.Point(330, 27);
             this.txtAulasDeCredito.Name = "txtAulasDeCredito";
             this.txtAulasDeCredito.Size = new System.Drawing.Size(85, 22);
             this.txtAulasDeCredito.TabIndex = 77;
@@ -234,7 +323,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(206, 30);
+            this.label15.Location = new System.Drawing.Point(196, 30);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(129, 17);
             this.label15.TabIndex = 76;
@@ -242,7 +331,7 @@
             // 
             // mkbT
             // 
-            this.mkbT.Location = new System.Drawing.Point(119, 27);
+            this.mkbT.Location = new System.Drawing.Point(109, 27);
             this.mkbT.Mask = "00/00/0000";
             this.mkbT.Name = "mkbT";
             this.mkbT.Size = new System.Drawing.Size(81, 22);
@@ -252,7 +341,7 @@
             // lblTrancamento
             // 
             this.lblTrancamento.AutoSize = true;
-            this.lblTrancamento.Location = new System.Drawing.Point(24, 30);
+            this.lblTrancamento.Location = new System.Drawing.Point(14, 30);
             this.lblTrancamento.Name = "lblTrancamento";
             this.lblTrancamento.Size = new System.Drawing.Size(92, 17);
             this.lblTrancamento.TabIndex = 14;
@@ -261,7 +350,7 @@
             // lblResponsavel
             // 
             this.lblResponsavel.AutoSize = true;
-            this.lblResponsavel.Location = new System.Drawing.Point(6, 326);
+            this.lblResponsavel.Location = new System.Drawing.Point(7, 224);
             this.lblResponsavel.Name = "lblResponsavel";
             this.lblResponsavel.Size = new System.Drawing.Size(94, 17);
             this.lblResponsavel.TabIndex = 80;
@@ -275,15 +364,15 @@
             "01",
             "10",
             "25"});
-            this.comboBox5.Location = new System.Drawing.Point(364, 352);
+            this.comboBox5.Location = new System.Drawing.Point(832, 25);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 24);
+            this.comboBox5.Size = new System.Drawing.Size(95, 24);
             this.comboBox5.TabIndex = 78;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(243, 354);
+            this.label14.Location = new System.Drawing.Point(719, 29);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(107, 17);
             this.label14.TabIndex = 77;
@@ -324,7 +413,7 @@
             // lblModalidades
             // 
             this.lblModalidades.AutoSize = true;
-            this.lblModalidades.Location = new System.Drawing.Point(7, 221);
+            this.lblModalidades.Location = new System.Drawing.Point(8, 261);
             this.lblModalidades.Name = "lblModalidades";
             this.lblModalidades.Size = new System.Drawing.Size(88, 17);
             this.lblModalidades.TabIndex = 23;
@@ -515,32 +604,6 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 218);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 24);
-            this.comboBox1.TabIndex = 88;
-            // 
-            // btnAAddResponsavel
-            // 
-            this.btnAAddResponsavel.Location = new System.Drawing.Point(410, 323);
-            this.btnAAddResponsavel.Name = "btnAAddResponsavel";
-            this.btnAAddResponsavel.Size = new System.Drawing.Size(75, 23);
-            this.btnAAddResponsavel.TabIndex = 89;
-            this.btnAAddResponsavel.Text = "Adicionar";
-            this.btnAAddResponsavel.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 327);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 17);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "------------------";
-            // 
             // frmAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -551,6 +614,8 @@
             this.Text = "frmAluno";
             this.gbAluno.ResumeLayout(false);
             this.gbAluno.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgModalidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPagamento)).EndInit();
             this.gbTrancamento.ResumeLayout(false);
             this.gbTrancamento.PerformLayout();
             this.ResumeLayout(false);
@@ -560,7 +625,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbAluno;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnSalvarAluno;
         private System.Windows.Forms.MaskedTextBox maskedTextBox5;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.TextBox txtRG;
@@ -607,5 +672,10 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAAddResponsavel;
+        private System.Windows.Forms.Label lblPagamentos;
+        private System.Windows.Forms.DataGridView dgPagamento;
+        private System.Windows.Forms.Button btnAddMod;
+        private System.Windows.Forms.DataGridView dgModalidades;
+        private System.Windows.Forms.Button btnExMod;
     }
 }
