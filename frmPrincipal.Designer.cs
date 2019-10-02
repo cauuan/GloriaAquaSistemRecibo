@@ -30,22 +30,21 @@
         {
             this.pnLogo = new System.Windows.Forms.Panel();
             this.pnPesquisa = new System.Windows.Forms.Panel();
+            this.txtPesPrincipal = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pnMostraAluno = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.caixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.responsávelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pagamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.caixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caixasAnterioresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pagamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtPesPrincipal = new System.Windows.Forms.TextBox();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Selecionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Mat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,12 +52,13 @@
             this.Responsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnMostraAluno = new System.Windows.Forms.Panel();
             this.pnLogo.SuspendLayout();
             this.pnPesquisa.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnMenu.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +83,13 @@
             this.pnPesquisa.Name = "pnPesquisa";
             this.pnPesquisa.Size = new System.Drawing.Size(634, 85);
             this.pnPesquisa.TabIndex = 0;
+            // 
+            // txtPesPrincipal
+            // 
+            this.txtPesPrincipal.Location = new System.Drawing.Point(347, 32);
+            this.txtPesPrincipal.Name = "txtPesPrincipal";
+            this.txtPesPrincipal.Size = new System.Drawing.Size(270, 22);
+            this.txtPesPrincipal.TabIndex = 0;
             // 
             // panel2
             // 
@@ -112,24 +119,6 @@
             this.pnMenu.Size = new System.Drawing.Size(125, 370);
             this.pnMenu.TabIndex = 2;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(125, 85);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(848, 370);
-            this.panel4.TabIndex = 3;
-            // 
-            // pnMostraAluno
-            // 
-            this.pnMostraAluno.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.pnMostraAluno.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnMostraAluno.Location = new System.Drawing.Point(686, 85);
-            this.pnMostraAluno.Name = "pnMostraAluno";
-            this.pnMostraAluno.Size = new System.Drawing.Size(287, 370);
-            this.pnMostraAluno.TabIndex = 4;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -142,8 +131,7 @@
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(110, 370);
+            this.menuStrip1.Size = new System.Drawing.Size(150, 370);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -157,21 +145,6 @@
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             // 
-            // caixaToolStripMenuItem
-            // 
-            this.caixaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.abrirToolStripMenuItem,
-            this.caixasAnterioresToolStripMenuItem});
-            this.caixaToolStripMenuItem.Name = "caixaToolStripMenuItem";
-            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
-            this.caixaToolStripMenuItem.Text = "Caixa";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
-            this.sairToolStripMenuItem.Text = "Sair";
-            // 
             // alunoToolStripMenuItem
             // 
             this.alunoToolStripMenuItem.Name = "alunoToolStripMenuItem";
@@ -184,37 +157,56 @@
             this.modalidadeToolStripMenuItem.Name = "modalidadeToolStripMenuItem";
             this.modalidadeToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
             this.modalidadeToolStripMenuItem.Text = "Modalidade";
+            this.modalidadeToolStripMenuItem.Click += new System.EventHandler(this.ModalidadeToolStripMenuItem_Click);
             // 
             // responsávelToolStripMenuItem
             // 
             this.responsávelToolStripMenuItem.Name = "responsávelToolStripMenuItem";
             this.responsávelToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
             this.responsávelToolStripMenuItem.Text = "Responsável";
+            this.responsávelToolStripMenuItem.Click += new System.EventHandler(this.ResponsávelToolStripMenuItem_Click);
+            // 
+            // pagamentosToolStripMenuItem
+            // 
+            this.pagamentosToolStripMenuItem.Name = "pagamentosToolStripMenuItem";
+            this.pagamentosToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
+            this.pagamentosToolStripMenuItem.Text = "Pagamentos";
+            // 
+            // caixaToolStripMenuItem
+            // 
+            this.caixaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirToolStripMenuItem,
+            this.caixasAnterioresToolStripMenuItem});
+            this.caixaToolStripMenuItem.Name = "caixaToolStripMenuItem";
+            this.caixaToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
+            this.caixaToolStripMenuItem.Text = "Caixa";
             // 
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.abrirToolStripMenuItem.Text = "Abrir";
             // 
             // caixasAnterioresToolStripMenuItem
             // 
             this.caixasAnterioresToolStripMenuItem.Name = "caixasAnterioresToolStripMenuItem";
-            this.caixasAnterioresToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.caixasAnterioresToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.caixasAnterioresToolStripMenuItem.Text = "Caixas Anteriores";
             // 
-            // pagamentosToolStripMenuItem
+            // sairToolStripMenuItem
             // 
-            this.pagamentosToolStripMenuItem.Name = "pagamentosToolStripMenuItem";
-            this.pagamentosToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
-            this.pagamentosToolStripMenuItem.Text = "Pagamentos";
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
+            this.sairToolStripMenuItem.Text = "Sair";
             // 
-            // txtPesPrincipal
+            // panel4
             // 
-            this.txtPesPrincipal.Location = new System.Drawing.Point(347, 32);
-            this.txtPesPrincipal.Name = "txtPesPrincipal";
-            this.txtPesPrincipal.Size = new System.Drawing.Size(270, 22);
-            this.txtPesPrincipal.TabIndex = 0;
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(125, 85);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(848, 370);
+            this.panel4.TabIndex = 3;
             // 
             // dataGridView1
             // 
@@ -267,12 +259,23 @@
             this.dtNascimento.HeaderText = "Nascimento";
             this.dtNascimento.MinimumWidth = 6;
             this.dtNascimento.Name = "dtNascimento";
+            this.dtNascimento.Width = 120;
             // 
             // Fone
             // 
             this.Fone.HeaderText = "Fone";
             this.Fone.MinimumWidth = 6;
             this.Fone.Name = "Fone";
+            this.Fone.Width = 120;
+            // 
+            // pnMostraAluno
+            // 
+            this.pnMostraAluno.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pnMostraAluno.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnMostraAluno.Location = new System.Drawing.Point(686, 85);
+            this.pnMostraAluno.Name = "pnMostraAluno";
+            this.pnMostraAluno.Size = new System.Drawing.Size(287, 370);
+            this.pnMostraAluno.TabIndex = 4;
             // 
             // frmPrincipal
             // 
@@ -295,9 +298,9 @@
             this.panel2.ResumeLayout(false);
             this.pnMenu.ResumeLayout(false);
             this.pnMenu.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

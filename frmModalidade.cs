@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaAquaRecibo
 {
-    public partial class addResp : Form
+    public partial class frmModalidade : Form
     {
-        public addResp()
+        public frmModalidade()
         {
             InitializeComponent();
         }

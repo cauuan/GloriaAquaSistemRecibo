@@ -1,6 +1,6 @@
 ﻿namespace SistemaAquaRecibo
 {
-    partial class addResp
+    partial class frmAddResp
     {
         /// <summary>
         /// Required designer variable.

@@ -21,5 +21,17 @@ namespace SistemaAquaRecibo
             frmAluno frm = new frmAluno();
             frm.ShowDialog();
         }
+
+        private void ModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModalidade frm = new frmModalidade();
+            frm.ShowDialog();
+        }
+
+        private void ResponsávelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmResponsavel frm = new frmResponsavel();
+            frm.ShowDialog();
+        }
     }
 }

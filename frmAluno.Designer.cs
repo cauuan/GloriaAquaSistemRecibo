@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbAluno = new System.Windows.Forms.GroupBox();
+            this.lblIdAluno = new System.Windows.Forms.Label();
             this.dgModalidades = new System.Windows.Forms.DataGridView();
             this.btnExMod = new System.Windows.Forms.Button();
             this.btnAddMod = new System.Windows.Forms.Button();
@@ -38,11 +39,10 @@
             this.btnAAddResponsavel = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSalvarAluno = new System.Windows.Forms.Button();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.label71 = new System.Windows.Forms.Label();
             this.txtRG = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.gbTrancamento = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.mkbFinalCreditoT = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.mkbRetornoT = new System.Windows.Forms.MaskedTextBox();
@@ -52,7 +52,7 @@
             this.mkbT = new System.Windows.Forms.MaskedTextBox();
             this.lblTrancamento = new System.Windows.Forms.Label();
             this.lblResponsavel = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbVencimento = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.lblMatricula = new System.Windows.Forms.Label();
@@ -89,6 +89,7 @@
             // 
             // gbAluno
             // 
+            this.gbAluno.Controls.Add(this.lblIdAluno);
             this.gbAluno.Controls.Add(this.dgModalidades);
             this.gbAluno.Controls.Add(this.btnExMod);
             this.gbAluno.Controls.Add(this.btnAddMod);
@@ -98,13 +99,11 @@
             this.gbAluno.Controls.Add(this.btnAAddResponsavel);
             this.gbAluno.Controls.Add(this.comboBox1);
             this.gbAluno.Controls.Add(this.btnSalvarAluno);
-            this.gbAluno.Controls.Add(this.maskedTextBox5);
-            this.gbAluno.Controls.Add(this.label71);
             this.gbAluno.Controls.Add(this.txtRG);
             this.gbAluno.Controls.Add(this.label35);
             this.gbAluno.Controls.Add(this.gbTrancamento);
             this.gbAluno.Controls.Add(this.lblResponsavel);
-            this.gbAluno.Controls.Add(this.comboBox5);
+            this.gbAluno.Controls.Add(this.cbVencimento);
             this.gbAluno.Controls.Add(this.label14);
             this.gbAluno.Controls.Add(this.txtMatricula);
             this.gbAluno.Controls.Add(this.lblMatricula);
@@ -140,6 +139,16 @@
             this.gbAluno.TabStop = false;
             this.gbAluno.Text = "Aluno";
             // 
+            // lblIdAluno
+            // 
+            this.lblIdAluno.AutoSize = true;
+            this.lblIdAluno.ForeColor = System.Drawing.Color.Transparent;
+            this.lblIdAluno.Location = new System.Drawing.Point(508, 472);
+            this.lblIdAluno.Name = "lblIdAluno";
+            this.lblIdAluno.Size = new System.Drawing.Size(16, 17);
+            this.lblIdAluno.TabIndex = 95;
+            this.lblIdAluno.Text = "0";
+            // 
             // dgModalidades
             // 
             this.dgModalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -173,7 +182,7 @@
             // lblPagamentos
             // 
             this.lblPagamentos.AutoSize = true;
-            this.lblPagamentos.Location = new System.Drawing.Point(508, 162);
+            this.lblPagamentos.Location = new System.Drawing.Point(508, 204);
             this.lblPagamentos.Name = "lblPagamentos";
             this.lblPagamentos.Size = new System.Drawing.Size(87, 17);
             this.lblPagamentos.TabIndex = 92;
@@ -182,11 +191,11 @@
             // dgPagamento
             // 
             this.dgPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPagamento.Location = new System.Drawing.Point(511, 185);
+            this.dgPagamento.Location = new System.Drawing.Point(511, 224);
             this.dgPagamento.Name = "dgPagamento";
             this.dgPagamento.RowHeadersWidth = 49;
             this.dgPagamento.RowTemplate.Height = 24;
-            this.dgPagamento.Size = new System.Drawing.Size(417, 280);
+            this.dgPagamento.Size = new System.Drawing.Size(417, 241);
             this.dgPagamento.TabIndex = 91;
             // 
             // label3
@@ -226,24 +235,6 @@
             this.btnSalvarAluno.UseVisualStyleBackColor = true;
             this.btnSalvarAluno.Click += new System.EventHandler(this.BtnSalvarAluno_Click);
             // 
-            // maskedTextBox5
-            // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(632, 26);
-            this.maskedTextBox5.Mask = "00/00/0000";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(81, 22);
-            this.maskedTextBox5.TabIndex = 86;
-            this.maskedTextBox5.ValidatingType = typeof(System.DateTime);
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(503, 29);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(121, 17);
-            this.label71.TabIndex = 85;
-            this.label71.Text = "Aula Experimental";
-            // 
             // txtRG
             // 
             this.txtRG.Location = new System.Drawing.Point(399, 56);
@@ -262,6 +253,7 @@
             // 
             // gbTrancamento
             // 
+            this.gbTrancamento.Controls.Add(this.button1);
             this.gbTrancamento.Controls.Add(this.mkbFinalCreditoT);
             this.gbTrancamento.Controls.Add(this.label17);
             this.gbTrancamento.Controls.Add(this.mkbRetornoT);
@@ -270,12 +262,21 @@
             this.gbTrancamento.Controls.Add(this.label15);
             this.gbTrancamento.Controls.Add(this.mkbT);
             this.gbTrancamento.Controls.Add(this.lblTrancamento);
-            this.gbTrancamento.Location = new System.Drawing.Point(502, 56);
+            this.gbTrancamento.Location = new System.Drawing.Point(502, 85);
             this.gbTrancamento.Name = "gbTrancamento";
-            this.gbTrancamento.Size = new System.Drawing.Size(436, 100);
+            this.gbTrancamento.Size = new System.Drawing.Size(436, 116);
             this.gbTrancamento.TabIndex = 82;
             this.gbTrancamento.TabStop = false;
             this.gbTrancamento.Text = "Trancamento";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(330, 87);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 23);
+            this.button1.TabIndex = 95;
+            this.button1.Text = "Salvar Aluno";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // mkbFinalCreditoT
             // 
@@ -356,23 +357,23 @@
             this.lblResponsavel.TabIndex = 80;
             this.lblResponsavel.Text = "Responsável:";
             // 
-            // comboBox5
+            // cbVencimento
             // 
-            this.comboBox5.DisplayMember = "Sexo";
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cbVencimento.DisplayMember = "Vencimento";
+            this.cbVencimento.FormattingEnabled = true;
+            this.cbVencimento.Items.AddRange(new object[] {
             "01",
             "10",
             "25"});
-            this.comboBox5.Location = new System.Drawing.Point(832, 25);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(95, 24);
-            this.comboBox5.TabIndex = 78;
+            this.cbVencimento.Location = new System.Drawing.Point(621, 26);
+            this.cbVencimento.Name = "cbVencimento";
+            this.cbVencimento.Size = new System.Drawing.Size(95, 24);
+            this.cbVencimento.TabIndex = 78;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(719, 29);
+            this.label14.Location = new System.Drawing.Point(508, 30);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(107, 17);
             this.label14.TabIndex = 77;
@@ -626,8 +627,6 @@
 
         private System.Windows.Forms.GroupBox gbAluno;
         private System.Windows.Forms.Button btnSalvarAluno;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.Label label71;
         private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.GroupBox gbTrancamento;
@@ -640,7 +639,7 @@
         private System.Windows.Forms.MaskedTextBox mkbT;
         private System.Windows.Forms.Label lblTrancamento;
         private System.Windows.Forms.Label lblResponsavel;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbVencimento;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.Label lblMatricula;
@@ -677,5 +676,7 @@
         private System.Windows.Forms.Button btnAddMod;
         private System.Windows.Forms.DataGridView dgModalidades;
         private System.Windows.Forms.Button btnExMod;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblIdAluno;
     }
 }
